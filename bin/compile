@@ -1,0 +1,14 @@
+echo "-----> Installing mdbtools 0.7"
+
+SOURCE_DIR="$(dirname $0)/../compiled"
+
+cd $1
+mkdir -p vendor
+#curl https://s3.amazonaws.com/db-stat/public/mdbtools-0.7.tar.gz -s -O
+#tar -C vendor -xvf mdbtools-0.7.tar.gz
+tar -C vendor -xvf "$SOURCE_DIR/mdbtools-0.7.tar.gz"
+
+build_dir=$1
+echo "Setting PATH"
+mkdir -p $build_dir/.profile.d
+echo "export PATH=\"\$HOME/vendor/mdbtools/src/util:\$PATH\"" > $build_dir/.profile.d/mdbtools.sh
