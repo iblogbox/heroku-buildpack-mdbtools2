@@ -10,5 +10,5 @@ build_dir=$1
 
 echo "Setting PATH"
 mkdir -p $build_dir/.profile.d
-echo "export PATH=\"\$HOME/vendor/mdbtools/bin:\$PATH\"" > $build_dir/.profile.d/mdbtools.sh
-echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/mdbtools/bin:\$LD_LIBRARY_PATH\"" > $build_dir/.profile.d/mdbtools.sh
+echo "export PATH=\"\$HOME/vendor/mdbtools/bin:\$PATH\"" >> $build_dir/.profile.d/mdbtools.sh
+echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/mdbtools/bin:\$LD_LIBRARY_PATH\"" >> $build_dir/.profile.d/mdbtools.sh
